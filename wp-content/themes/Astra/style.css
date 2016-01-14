@@ -1,0 +1,107 @@
+/*
+Theme Name: Astra
+Description: A Retina-Ready Responsive Creative WordPress Theme.
+Version: 1.7
+Author:	UpSolution
+Theme URI: http://astra.us-themes.com/
+Author URI: http://us-themes.com/
+License: Themeforest Split Licence
+License URI: -
+*/
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.tp-bannershadow.tp-shadow2 {
+	display: none;
+}
+.wpb_revslider_element+.wpb_text_column>.wpb_wrapper>p {
+	margin-bottom: 0px;
+}
+
+.custom-box-help-bis .w-iconbox.icon_top .w-iconbox-h {
+	border-color: #149bd7;
+}
+
+.footer-form .g-cols {
+	margin-bottom: 20px;
+}
+.footer-form select>option:disabled {
+	display: none;
+}
+.footer-form input[type="text"],
+.footer-form input[type="submit"],
+.footer-form select {
+	height: auto;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+.footer-form input[type="text"],
+.footer-form select {
+	border-radius: 0px;
+}
+.footer-form input[type="submit"] {
+	margin: 0px;
+}
+
+.footer-contacts {
+	border: 1px solid #5d6b7a;
+	margin: 0 auto;
+	padding: 20px;
+	width: 333px;
+}
+.footer-contacts .contact-data {
+	background-image: url('http://res.cloudinary.com/syntegrico/image/upload/v1449053791/world-map.png');
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.l-subfooter.at_top .footer-contacts a {
+	color: #fff;
+}
+.l-subfooter.at_top .footer-contacts a:active,
+.l-subfooter.at_top .footer-contacts a:focus,
+.l-subfooter.at_top .footer-contacts a:hover {
+	text-decoration: underline;
+}
+.footer-contacts .contact {
+	margin-bottom: 20px;
+}
+.footer-contacts .contact-type {
+	display: inline-block;
+	float: left;
+	width: 60px;
+}
+.footer-contacts .contact-info {
+	color: white;
+	display: inline-block;
+	float: left;
+}
+.footer-contacts .icon-wrapper {
+	display: table;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+}
+.footer-contacts .icon {
+	background-color: #253444;
+	border-radius: 50%;
+	color: #fff;
+	display: table-cell;
+	font-size: 30px;
+	height: 45px;
+	width: 45px;
+}
+.footer-contacts .fa {
+	display: inline-block;
+	margin-top: 9px;
+}
+.footer-contacts .fa.fa-linkedin {
+	margin-top: 4px;
+}

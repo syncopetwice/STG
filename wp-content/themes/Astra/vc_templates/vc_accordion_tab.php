@@ -1,0 +1,40 @@
+<?php
+if (us_is_vc_fe()) {
+	$default_dir = vc_manager()->getDefaultShortcodesTemplatesDir() . '/';
+	if ( is_file( $default_dir . 'vc_accordion_tab.php' ) ) {
+		include( $default_dir . 'vc_accordion_tab.php' );
+		return;
+	}
+}
+$attributes = shortcode_atts(
+	array(
+		'title' => '',
+		'open' => (@in_array('open', $atts) OR (isset($atts['open']) AND $atts['open'] == 1)),
+		'icon' => '',
+	), $atts);
+
+global $first_tab, $auto_open;
+if ($auto_open) {
+	$active_class = ($first_tab)?' active':'';
+	$first_tab = FALSE;
+} else {
+	$active_class = ($attributes['open'])?' active':'';
+}
+$icon_class = ($attributes['icon'] != '')?' fa fa-'.$attributes['icon']:'';
+$item_icon_class = ($attributes['icon'] != '')?' with_icon':'';
+
+$output = 	'<div class="w-tabs-section'.$active_class.$item_icon_class.'">'.
+				'<div class="w-tabs-section-title">'.
+					'<span class="w-tabs-section-title-icon'.$icon_class.'"></span>'.
+					'<span class="w-tabs-section-title-text">'.$attributes['title'].'</span>'.
+					'<span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>'.
+				'</div>'.
+				'<div class="w-tabs-section-content">'.
+					'<div class="w-tabs-section-content-h">'.
+						do_shortcode($content).
+					'</div>'.
+				'</div>'.
+			'</div>';
+
+
+echo $output;
